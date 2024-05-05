@@ -192,8 +192,8 @@ class App(ctk.CTk):
         extension = os.path.splitext(self.raw_img_path)[1]
         shape = get_image_shape(self.raw_img_path)
         raw_name = os.path.splitext(self.raw_img_path)[0][:40]
-        if len(self.raw_img_path)>42:
-            raw_name+="..."
+        if len(self.raw_img_path) > 42:
+            raw_name += "..."
 
         self.raw_img_label.configure(text=f"Raw image in [{raw_name}{extension}] {shape}")
         shape = get_image_shape(self.mod_img_path)

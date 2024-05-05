@@ -6,7 +6,8 @@
 with filters and convolution techniques in image processing. The application provides
 a user-friendly interface for exploring various filters, convolution operations,
 and their effects on images. Users can visualize the results in real-time and gain insights into the fundamentals of
-image processing.
+image processing.<br>
+For run the GUI follow the instructions, please refer to [RUN](#run-the-app).
 </strong>
 
 ## Key Features:
@@ -28,3 +29,27 @@ image processing.
 
 - ### light mode
 ![screenshot2.png](screenshot2.png)
+
+## Run the App
+
+### 1. Clone the repository:
+
+```bash
+git clone https://github.com/AmirHDevo/FilterPlaygroud.git
+``` 
+
+### 2. Navigate to the project directory:
+
+```bash 
+cd FilterPlayground
+```
+
+### 3. run app
+```bash 
+python app.py
+```
+#### or 
+```bash
+py app.py
+```
+
