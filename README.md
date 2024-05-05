@@ -8,6 +8,7 @@ a user-friendly interface for exploring various filters, convolution operations,
 and their effects on images. Users can visualize the results in real-time and gain insights into the fundamentals of
 image processing.<br>
 For run the GUI follow the instructions, please refer to [Run the GUI](#run-the-gui).
+You can change and modify the filters in the 'filter_script' folder.
 </strong>
 
 ## Key Features:
