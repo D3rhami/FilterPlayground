@@ -25,9 +25,11 @@ For run the GUI follow the instructions, please refer to [RUN](#run-the-app).
 **This section provides a screenshot of the GUI**.
 
 - ### dark mode
+
 ![screenshot1.png](screenshot1.png)
 
 - ### light mode
+
 ![screenshot2.png](screenshot2.png)
 
 ## Run the App
@@ -44,11 +46,20 @@ git clone https://github.com/AmirHDevo/FilterPlaygroud.git
 cd FilterPlayground
 ```
 
-### 3. run app
+### 3.Install the required dependencies using pip:
+
+```
+pip install -r requirements.txt
+```
+
+### 4. run app
+
 ```bash 
 python app.py
 ```
-#### or 
+
+#### or
+
 ```bash
 py app.py
 ```
