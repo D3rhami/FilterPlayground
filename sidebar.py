@@ -110,6 +110,9 @@ class Sidebar(ctk.CTkFrame):
 
         import threading
 
+        if self.axis_toggle_box.get() == 1 and self.hist_toggle_box.get() == 1:
+            self.hist_toggle_box.deselect()
+
         def toggle():
             self.progressbar.configure(fg_color="#121e4c")
             self.progressbar.start()
@@ -137,6 +140,9 @@ class Sidebar(ctk.CTkFrame):
 
     def histogram_toggle(self):
         import threading
+
+        if self.axis_toggle_box.get() == 1 and self.hist_toggle_box.get() == 1:
+            self.axis_toggle_box.deselect()
 
         def toggle():
             self.progressbar.configure(fg_color="#121e4c")
