@@ -7,7 +7,7 @@ with filters and convolution techniques in image processing. The application pro
 a user-friendly interface for exploring various filters, convolution operations,
 and their effects on images. Users can visualize the results in real-time and gain insights into the fundamentals of
 image processing.<br>
-For run the GUI follow the instructions, please refer to [RUN](#run-the-app).
+For run the GUI follow the instructions, please refer to [Run the GUI](#run-the-gui).
 </strong>
 
 ## Key Features:
@@ -32,12 +32,12 @@ For run the GUI follow the instructions, please refer to [RUN](#run-the-app).
 
 ![screenshot2.png](screenshot2.png)
 
-## Run the App
+## Run the GUI
 
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/AmirHDevo/FilterPlaygroud.git
+git clone https://github.com/AmirHDevo/FilterPlayground.git
 ``` 
 
 ### 2. Navigate to the project directory:
