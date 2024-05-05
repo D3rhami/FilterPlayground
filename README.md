@@ -12,13 +12,13 @@ For run the GUI follow the instructions, please refer to [Run the GUI](#run-the-
 
 ## Key Features:
 
-<strong>
-- Interactive GUI for studying filters and convolution
-- Supports exploration of various filter types and configurations
-- Real-time visualization of filter effects on images
-- Educational tool for learning image processing concepts
-- Cross-platform compatibility (Windows, macOS)
- </strong>
+ 
+- **Interactive GUI for studying filters and convolution**
+- **Supports exploration of various filter types and configurations**
+- **Real-time visualization of filter effects on images**
+- **Educational tool for learning image processing concepts**
+- **Cross-platform compatibility (Windows, macOS)**
+ 
 
 ## overview
 
