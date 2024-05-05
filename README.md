@@ -12,13 +12,11 @@ For run the GUI follow the instructions, please refer to [Run the GUI](#run-the-
 
 ## Key Features:
 
- 
 - **Interactive GUI for studying filters and convolution**
 - **Supports exploration of various filter types and configurations**
 - **Real-time visualization of filter effects on images**
 - **Educational tool for learning image processing concepts**
 - **Cross-platform compatibility (Windows, macOS)**
- 
 
 ## overview
 
@@ -64,3 +62,6 @@ python app.py
 py app.py
 ```
 
+## License
+
+- **This project is licensed under the [MIT License.](LICENSE)**
