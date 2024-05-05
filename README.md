@@ -62,6 +62,55 @@ python app.py
 py app.py
 ```
 
+## Create Executable file
+ 
+Here's how you can create a virtual environment, activate it, and then run the PyInstaller command on both macOS and 
+Windows, all within a Markdown code block for your README.md:
+### 1.Clone the repository:
+
+```bash
+git clone https://github.com/AmirHDevo/FilterPlayground.git
+```
+
+### 2.Create a virtual environment
+- #### macOS:
+```bash 
+# Create a virtual environment
+python3 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate
+```
+- #### windows
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+.\venv\Scripts\activate
+```
+
+
+### 3. Navigate to the project directory:
+
+```bash 
+cd FilterPlayground
+```
+
+### 4.Install the required dependencies using pip:
+
+```
+pip install -r requirements.txt
+```
+
+### 5.Run PyInstaller to generate the executable:
+```bash
+pyinstaller --onefile --windowed --icon=logo.icn --name=FilterPlayground app.py
+```
+### 6.Run exe
+**Now the exe is created and its in the dist folder copy it to the current folder(FilterPlayground).
+double-click the FilterPlayground.exe to open and run it.
+```
 ## License
 
 - **This project is licensed under the [MIT License.](LICENSE)**
