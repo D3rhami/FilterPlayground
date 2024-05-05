@@ -266,6 +266,7 @@ class App(ctk.CTk):
             print("Script Output:", str(output))
             if output is not None:
                 # Reload and resize the images
+                self.mod_img_path=self.temp_out
                 self.mod_img = self.load_and_resize_image(image_path=output, size=self.height, )
                 self.mod_img_canvas.destroy()
                 self.create_img_in_canvas(row=2, col=4, img=self.mod_img)
@@ -305,6 +306,7 @@ class App(ctk.CTk):
             plt.imsave(self.temp_out, filtered_image, cmap='gray')
 
             # Reload and resize the images
+            self.mod_img_path = self.temp_out
             self.mod_img = self.load_and_resize_image(image_path=self.temp_out, size=self.height, )
             self.mod_img_canvas.destroy()
             self.create_img_in_canvas(row=2, col=4, img=self.mod_img)
