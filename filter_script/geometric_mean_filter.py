@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.ndimage import generic_filter
 
-import get_args
+import __get_args
 
 
 def geometric_mean_filter(image, filter_size):
@@ -17,7 +17,7 @@ def geometric_mean_filter(image, filter_size):
 
 
 def main():
-    args = get_args.aget()
+    args = __get_args.aget()
     image = plt.imread(args.img_path)
     new_img = geometric_mean_filter(image, filter_size=int(args.kernel_size))
     out = "temp.jpg"

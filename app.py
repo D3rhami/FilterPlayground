@@ -22,7 +22,7 @@ class App(ctk.CTk):
         self.mod_img_path = os.path.abspath("placeHolder.jpg")
         self.temp_out = "temp.jpg"
         self.name_id = "app main"
-        self.title("FilterPlayground by AmirHoseein Derhami")
+        self.title("FilterPlayground: Apply Filters & Convolution to Understand Visually | by AmirHoseein Derhami")
         self.iconbitmap("logo.ico")
         sidebar_width = 140
         self.middel_width = 180
@@ -54,7 +54,7 @@ class App(ctk.CTk):
                                       segmented_button_selected_hover_color="#c81e50"
                                       )
         self.tabview.grid(row=1, column=3, rowspan=2, padx=1, pady=5, sticky="ns")
-        self.tabview.segmented_button.configure(font=font_config)
+        self.tabview._segmented_button.configure(font=font_config)
 
         self.tabview.add("Conv")
         self.tabview.add("Filters")
@@ -80,7 +80,6 @@ class App(ctk.CTk):
 
         self.raw_img_canvas = self.create_img_in_canvas(row=2, col=2, img=self.raw_img)
         self.mod_img_canvas = self.create_img_in_canvas(row=2, col=4, img=self.mod_img)
-
         # set label top rows
         self.update_top_labels()
 
@@ -118,7 +117,7 @@ class App(ctk.CTk):
 
             self.raw_img_canvas = self.create_img_in_canvas(row=2, col=2, img=self.raw_img)
             self.mod_img_canvas = self.create_img_in_canvas(row=2, col=4, img=self.mod_img)
-
+            self.update_top_labels()
         else:
             # load and display images
             self.mod_img = self.load_and_resize_image(self.mod_img_path, size=self.height)
@@ -126,6 +125,7 @@ class App(ctk.CTk):
 
             self.mod_img_canvas = self.create_img_in_canvas(row=2, col=4, img=self.mod_img)
             self.raw_img_canvas = self.create_img_in_canvas(row=2, col=2, img=self.raw_img)
+            self.update_top_labels()
 
         print("axis toggled")
 
@@ -139,6 +139,7 @@ class App(ctk.CTk):
 
             self.raw_img_canvas = self.create_img_in_canvas(row=2, col=2, img=self.raw_img)
             self.mod_img_canvas = self.create_img_in_canvas(row=2, col=4, img=self.mod_img)
+            self.update_top_labels()
 
         else:
             # load and display images
@@ -147,6 +148,7 @@ class App(ctk.CTk):
 
             self.raw_img_canvas = self.create_img_in_canvas(row=2, col=2, img=self.raw_img)
             self.mod_img_canvas = self.create_img_in_canvas(row=2, col=4, img=self.mod_img)
+            self.update_top_labels()
 
         print("histogram toggled")
 
@@ -221,6 +223,22 @@ class App(ctk.CTk):
 
         print(self.name_id, "src image path:", img_path)
 
+    def swap_images(self):
+        import shutil
+        # load and display images
+        temp_swap_path = "swap_" + self.temp_out
+        shutil.copy(self.mod_img_path, temp_swap_path)
+        self.mod_img_path = f"{self.raw_img_path}"
+        self.raw_img_path = temp_swap_path
+
+        height = self.height
+        self.raw_img = self.load_and_resize_image(self.raw_img_path, size=height)
+        self.mod_img = self.load_and_resize_image(self.mod_img_path, size=height)
+
+        self.mod_img_canvas = self.create_img_in_canvas(row=2, col=4, img=self.mod_img)
+        self.raw_img_canvas = self.create_img_in_canvas(row=2, col=2, img=self.raw_img)
+        self.update_top_labels()
+
     def save_new_image(self):
         import tkinter.filedialog as filedialog
 
@@ -266,7 +284,7 @@ class App(ctk.CTk):
             print("Script Output:", str(output))
             if output is not None:
                 # Reload and resize the images
-                self.mod_img_path=self.temp_out
+                self.mod_img_path = self.temp_out
                 self.mod_img = self.load_and_resize_image(image_path=output, size=self.height, )
                 self.mod_img_canvas.destroy()
                 self.create_img_in_canvas(row=2, col=4, img=self.mod_img)

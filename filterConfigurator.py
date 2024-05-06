@@ -167,7 +167,7 @@ class KernelConfigurator(ctk.CTkFrame):
     def apply_conv(self):
         import threading
         import numpy as np
-        
+
         def conv():
             self.progressbar.configure(fg_color="#121e4c")
             self.progressbar.start()
@@ -358,7 +358,7 @@ class FilterConfigurator(ctk.CTkFrame):
             python_files = {}
             for root, dirs, files in os.walk(directory):
                 for file in files:
-                    if file.endswith(".py"):
+                    if file.endswith(".py") and not file.startswith("__"):
                         file_path = os.path.join(root, file)
                         file = file.rstrip("py")
                         text = str(file).translate(

@@ -1,6 +1,6 @@
 import cv2
 
-import get_args
+from FilterPlayground.filter_script import __get_args
 
 
 def gray_scale(img_path, ):
@@ -9,11 +9,11 @@ def gray_scale(img_path, ):
 
 
 def main():
-    args = get_args.aget()
+    args = __get_args.aget()
     new_img = gray_scale(args.img_path, )
     out = "temp.jpg"
     cv2.imwrite(out, new_img)
-    print(out,end='')
+    print(out, end='')
 
 
 if __name__ == "__main__":

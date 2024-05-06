@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-import get_args
+import __get_args
 
 
 # Function to perform arithmetic mean filtering
@@ -25,7 +25,7 @@ def mean_filter(image, filter_size):
 
 
 def main():
-    args = get_args.aget()
+    args = __get_args.aget()
     image = plt.imread(args.img_path)
     new_img = mean_filter(image, filter_size=int(args.kernel_size))
     out = "temp.jpg"

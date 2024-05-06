@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-import get_args
+import __get_args
 
 
 # Function to perform minimum filtering
@@ -25,7 +25,7 @@ def minimum_filter(image, filter_size):
 
 
 def main():
-    args = get_args.aget()
+    args = __get_args.aget()
     image = plt.imread(args.img_path)
     new_img = minimum_filter(image, filter_size=int(args.kernel_size))
     out = "temp.jpg"

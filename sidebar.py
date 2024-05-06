@@ -3,7 +3,7 @@ from tkinter import messagebox
 
 import customtkinter as ctk
 
-from assets import BTN_FS, FONT_SIZE, FONTS, PIC_DIR
+from assets import BTN_FS, FONTS, PIC_DIR
 
 
 class Sidebar(ctk.CTkFrame):
@@ -17,33 +17,28 @@ class Sidebar(ctk.CTkFrame):
         self.grid_columnconfigure(0, weight=1)
 
         row = 0
-
-        # Top Label
-        text_top = ("Apply Filters \n& Convolution"
-                    "\nto Understand \nVisually :)")
-        self.top_label = ctk.CTkLabel(self, text=text_top, justify="center",
-                                      font=ctk.CTkFont(family=FONTS['GeorgiaSans'], size=FONT_SIZE,
-                                                       weight="bold"))
-        self.top_label.grid(row=row, column=1, pady=(25, 5), sticky='sn')
-        row += 1
+        font_conf1 = ctk.CTkFont(family=FONTS['Montserrat'], weight="bold", size=BTN_FS)
 
         # ttk.Separator(self, orient='horizontal').pac k(fill='x', pad y=5)
         # progressbar
-        self.progressbar = self.create_progressbar(col=1, row=row, pad_y=(5, 5), column_span=1)
-        self.progressbar_row = row
-        row += 1
-
-        font_conf1 = ctk.CTkFont(family=FONTS['Montserrat'], weight="bold", size=BTN_FS)
 
         # Open Image Button
         self.open_image_btn = ctk.CTkButton(self, text="Open Image", fg_color="#042d64",
                                             command=self.open_image_event,
                                             border_color="#3a596d", border_width=1,
                                             height=35, width=140)
-        self.open_image_btn.grid(row=row, column=1, padx=10, pady=(25, 10))
+        self.open_image_btn.grid(row=row, column=1, padx=10, pady=10)
         self.open_image_btn.configure(font=font_conf1)
         row += 1
 
+        # Swap Images Button
+        self.sawp_images_btn = ctk.CTkButton(self, text="Sawp Images", fg_color="#042d64",
+                                             command=self.swap_images,
+                                             border_color="#3a596d", border_width=1,
+                                             height=35, width=140)
+        self.sawp_images_btn.grid(row=row, column=1, padx=10, pady=(25, 10))
+        self.sawp_images_btn.configure(font=font_conf1)
+        row += 1
         # Add New Function Button
         self.add_function_btn = ctk.CTkButton(self, text="Add New\nFunction", command=self.add_function_event,
                                               border_color="#3a596d", border_width=1,
@@ -58,6 +53,10 @@ class Sidebar(ctk.CTkFrame):
                                             height=35, width=140, fg_color="#042d64")
         self.save_image_btn.grid(row=row, column=1, padx=10, pady=10)
         self.save_image_btn.configure(font=font_conf1)
+        row += 1
+
+        self.progressbar = self.create_progressbar(col=1, row=row, pad_y=(5, 5), column_span=1)
+        self.progressbar_row = row
         row += 1
 
         # axis toggle
@@ -288,3 +287,6 @@ if __name__ == "__main__":
                                          fg_color="#f1f1f1", progress_color="#f1f1f1")
         progressbar.grid(row=row, column=col, columnspan=column_span, padx=1, pady=pad_y)
         return progressbar
+
+    def swap_images(self):
+        self.parent.swap_images()

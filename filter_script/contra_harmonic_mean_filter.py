@@ -1,9 +1,7 @@
-import os
-
 import matplotlib.pyplot as plt
 import numpy as np
 
-import get_args
+import __get_args
 
 
 # Function to perform contra-harmonic mean filtering
@@ -29,7 +27,7 @@ def contra_harmonic_mean_filter(image, filter_size, q=1):
 
 
 def main():
-    args = get_args.aget()
+    args = __get_args.aget()
     image = plt.imread(args.img_path)
     try:
         q = float(args.Q)
