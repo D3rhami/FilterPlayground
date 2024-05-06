@@ -17,6 +17,11 @@ class Sidebar(ctk.CTkFrame):
         self.grid_columnconfigure(0, weight=1)
 
         row = 0
+
+        top_label = ctk.CTkLabel(self, text="", height=60)
+        top_label.grid(row=row, column=1, sticky="nsew", )
+        row += 1
+
         font_conf1 = ctk.CTkFont(family=FONTS['Montserrat'], weight="bold", size=BTN_FS)
 
         # ttk.Separator(self, orient='horizontal').pac k(fill='x', pad y=5)
@@ -26,7 +31,7 @@ class Sidebar(ctk.CTkFrame):
         self.open_image_btn = ctk.CTkButton(self, text="Open Image", fg_color="#042d64",
                                             command=self.open_image_event,
                                             border_color="#3a596d", border_width=1,
-                                            height=35, width=140)
+                                            height=35, width=width)
         self.open_image_btn.grid(row=row, column=1, padx=10, pady=10)
         self.open_image_btn.configure(font=font_conf1)
         row += 1
@@ -35,14 +40,14 @@ class Sidebar(ctk.CTkFrame):
         self.sawp_images_btn = ctk.CTkButton(self, text="Sawp Images", fg_color="#042d64",
                                              command=self.swap_images,
                                              border_color="#3a596d", border_width=1,
-                                             height=35, width=140)
+                                             height=35, width=width)
         self.sawp_images_btn.grid(row=row, column=1, padx=10, pady=(25, 10))
         self.sawp_images_btn.configure(font=font_conf1)
         row += 1
         # Add New Function Button
         self.add_function_btn = ctk.CTkButton(self, text="Add New\nFunction", command=self.add_function_event,
                                               border_color="#3a596d", border_width=1,
-                                              fg_color="#042d64", height=50, width=140)
+                                              fg_color="#042d64", height=50, width=width)
         self.add_function_btn.grid(row=row, column=1, padx=10, pady=10)
         self.add_function_btn.configure(font=font_conf1)
         row += 1
@@ -50,7 +55,7 @@ class Sidebar(ctk.CTkFrame):
         # Save Image Button
         self.save_image_btn = ctk.CTkButton(self, text="Save Image", command=self.save_image_event,
                                             border_color="#3a596d", border_width=1,
-                                            height=35, width=140, fg_color="#042d64")
+                                            height=35, width=width, fg_color="#042d64")
         self.save_image_btn.grid(row=row, column=1, padx=10, pady=10)
         self.save_image_btn.configure(font=font_conf1)
         row += 1

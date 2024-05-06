@@ -110,8 +110,7 @@ pyinstaller --onefile --windowed --icon=logo.icn --name=FilterPlayground app.py
 ```
 ### 6.Run exe
 **Now the exe is created and its in the dist folder copy it to the current folder(FilterPlayground).
-double-click the FilterPlayground.exe to open and run it.
-```
+double-click the FilterPlayground.exe to open and run it.**
 ## License
 
 - **This project is licensed under the [MIT License.](LICENSE)**
