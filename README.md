@@ -36,7 +36,7 @@ You can change and modify the filters in the 'filter_script' folder and make new
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/AmirHDevo/FilterPlayground.git
+git clone https://github.com/D3rhami/FilterPlayground.git
 ``` 
 
 ### 2. Navigate to the project directory:
@@ -70,7 +70,7 @@ Windows, all within a Markdown code block for your README.md:
 ### 1.Clone the repository:
 
 ```bash
-git clone https://github.com/AmirHDevo/FilterPlayground.git
+git clone https://github.com/D3rhami/FilterPlayground.git
 ```
 
 ### 2.Create a virtual environment
